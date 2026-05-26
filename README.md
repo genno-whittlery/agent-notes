@@ -26,6 +26,7 @@ shape changes.
 | **2026-05-05** | static | [`2026-05-claude-for-finance.md`](./2026-05-claude-for-finance.md) | Anthropic's 10 finance-agent templates + Opus 4.7 finance-benchmark lead + Microsoft 365 integration + $1.5B enterprise JV |
 | **2026-04-17** | static | [`2026-04-claude-design.md`](./2026-04-claude-design.md) | Claude Design + "Claude for Creative Work" — Anthropic past coding into design / Adobe-Autodesk-Ableton-Blender-Splice connector network |
 | **2026-04-08** | static | [`2026-04-aie-europe.md`](./2026-04-aie-europe.md) | AI Engineer Europe (London, 8–10 April) — harness engineering crystallises, "strange stickiness of coding products," AI coding wars |
+| **2026-04** | static | [`2026-04-karpathy-llm-wiki.md`](./2026-04-karpathy-llm-wiki.md) | Karpathy's *LLM wiki* Gist — spec for filesystem-first agent memory via Obsidian; spawned six+ community implementations including Cognition's claude-memory-compiler |
 | **2026-04** | rolling | [`2026-04-hermes-agent.md`](./2026-04-hermes-agent.md) | Nous Research's Hermes Agent — CLI orchestrator that delegates to Claude Code + Codex; ACP protocol (April 2026) |
 | **2026-04** | rolling | [`2026-04-managed-agents-sdk.md`](./2026-04-managed-agents-sdk.md) | `managed-agents-2026-04-01` beta — multi-instance orchestration |
 | **2026-03** | rolling | [`2026-03-blomfield-economics.md`](./2026-03-blomfield-economics.md) | Tom Blomfield (YC partner) on the economics of agentic coding — the "24-year-old vs Accenture" line, 95%-AI-written at YC startups, Jack Clark's "majority of Anthropic's code" |
