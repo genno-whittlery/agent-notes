@@ -30,6 +30,14 @@ shape changes.
 some 2026-05 supersede notes (e.g., 2.1.143 `Stop` 8-cap) marking
 post-March reverberations.
 
+## Who we follow
+
+The intake list — bloggers, podcasts, aggregators, official release
+channels, adjacent ecosystems — that feeds the entries above lives
+in [`following.md`](./following.md). Same shape as the entries:
+dated, honest about gaps, cross-marked with the citations in each
+entry so readers can see which voices show up where.
+
 ## How to read this
 
 Top → bottom = recency-first. If you're new to Claude Code, **start at

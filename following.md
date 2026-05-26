@@ -10,15 +10,32 @@ about what each source covers and doesn't, no implicit ranking.
 
 ## Anthropic-first-party
 
+The official surfaces — multiple, because new features get announced
+on different channels at different cadences. Anthropic itself is the
+single most release-active source; the rest of the list is downstream
+context on what Anthropic shipped.
+
 | Source | What | Where | Cadence |
 |---|---|---|---|
+| **★ Anthropic Claude Code changelog** | Per-version notes for the CLI; canonical for hook events, flag changes, env vars | <https://code.claude.com/docs/en/changelog> | Per release (≈ every 1–2 days during 2026) |
+| **GitHub releases — `anthropics/claude-code`** | Raw release feed; arrives often *before* the changelog page renders the entry | <https://github.com/anthropics/claude-code/releases> | Per release; RSS-able |
 | **★ Anthropic Engineering blog** | Implementation-level posts (context engineering, agent architecture, safety) | <https://www.anthropic.com/engineering> | Irregular — averages ~1–2 deep posts/month |
-| **★ Anthropic Claude Code changelog** | Per-version notes for the CLI; canonical for hook events + flag changes | <https://code.claude.com/docs/en/changelog> | Per release (≈ every 1–2 days during 2026) |
 | **Anthropic News / Product** | Launches + feature framing (Code Review, Managed Agents, Code w/ Claude) | <https://www.anthropic.com/news> | Per launch |
 | **★ Claude Cookbook** | Worked examples for SDK + agent patterns | <https://platform.claude.com/cookbook/> | Irregular; grows during big launches |
 | **★ Claude Code docs** | The reference for CLI / config / settings.json | <https://code.claude.com/docs/en/> | Continuous |
-| **★ Boris Cherny** (Head of Claude Code) | Direction-of-travel framing; "coding is solved, what comes next" | Podcast circuit; X/Twitter | When invited on podcasts |
+| **Anthropic on X/Twitter** | Launch announcements + the official voice during conferences | [@AnthropicAI](https://twitter.com/AnthropicAI) | Daily-ish |
+| **★ Boris Cherny** (Head of Claude Code) | Direction-of-travel framing; "coding is solved, what comes next"; the most-cited single voice on CC in 2026 | Podcast circuit + [@bcherny](https://twitter.com/bcherny) | Podcasts: monthly-ish; tweets: weekly-ish |
 | **★ Cat Wu** (founding engineer, Claude Code) | Engineering-side framing; tools & UX choices | Podcast circuit | Less frequent than Cherny |
+| **Code w/ Claude** | Anthropic's annual developer conference (first edition May 2026 — Code Review launch); talks recorded after | <https://www.anthropic.com/events> + Anthropic YouTube | Annual; rewatch when feature direction shifts |
+| **Anthropic YouTube** | Recorded conference talks, demo videos, Cherny / Wu keynotes | <https://www.youtube.com/@anthropic-ai> | Per launch / conference |
+
+**Working note:** the *changelog page* and the *GitHub releases page*
+both list version-by-version updates, but they don't always
+synchronise — releases drops to GitHub first, the changelog page
+catches up within 24–48 hours. For "I want to know the moment a new
+version ships" the right feed is the GitHub releases RSS; for
+"I want the digested version with prose summaries" the changelog
+page is canonical. Subscribe to both.
 
 ## Independent voices (already in our citations)
 
