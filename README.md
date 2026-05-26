@@ -4,13 +4,12 @@ Whittlery's running, dated reference on Claude Code as it evolved through
 2026. Six entries today, newest at the top; the layout is intentionally
 changelog-shaped so new material can be prepended without restructuring.
 
-This exists because the most-cited 2026 community guides (zeuikli's
-`cc-workspace-docs`, several Medium and Substack posts) have plausible
-structure but factual errors that hide behind being in your second
-language. The remedy here: every concrete claim is cited, every event
-name verified against the [official Anthropic
-changelog](https://code.claude.com/docs/en/changelog), and the entries
-are dated so a reader can see which parts age first.
+This exists because the most-cited 2026 community guides have
+plausible structure but factual errors — invented hook event names,
+unsourced numbers, conflated CLI-vs-hook surfaces. The remedy here:
+every concrete claim is cited, every event name verified against the
+[official Anthropic changelog](https://code.claude.com/docs/en/changelog),
+and the entries are dated so a reader can see which parts age first.
 
 ## Entries (newest → oldest)
 
