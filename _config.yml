@@ -2,8 +2,8 @@
 # Keep this file minimal — the notes are the product; the site is just
 # a way to read them in a browser.
 
-title: Claude Code in 2026 — notes
-description: Personal study notes on Claude Code as it evolved through 2026 (newest-first, rolling).
+title: Agent notes
+description: Personal study notes on agentic engineering through 2026 — Claude Code, harness design, multi-agent orchestration, local inference, adjacent ecosystems (newest-first, rolling).
 
 # Default theme that ships with GitHub Pages. Cayman is plain and
 # readable; the notes carry their own structure so a heavy theme

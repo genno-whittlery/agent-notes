@@ -1,11 +1,18 @@
-# Claude Code in 2026 — a newest-first reference
+# Agent notes — agentic engineering through 2026
 
-*Rendered: <https://genno-whittlery.github.io/claude-code-notes/>*
+*Rendered: <https://genno-whittlery.github.io/agent-notes/>*
 
-Personal study notes on Claude Code as it evolved through 2026. Six
-entries today, newest at the top; the layout is intentionally
-changelog-shaped so new material can be prepended without
-restructuring as our understanding grows.
+Personal study notes on **agentic engineering** as it evolved
+through 2026. The starting subject was Claude Code; the scope
+broadened across the year to cover adjacent agents (Hermes,
+opencode), local-inference backends (ds4.c / DeepSeek V4), the
+harness-engineering umbrella, Anthropic's vertical surfaces
+(Code Review, Design, Finance), conference proceedings (AIE
+Europe), the economics framing (Blomfield), and the memory
+patterns (Karpathy's LLM Wiki). Fifteen entries today, newest at
+the top; the layout is intentionally changelog-shaped so new
+material can be prepended without restructuring as our
+understanding grows.
 
 Working discipline: every concrete claim cites a 2026 source, every
 hook event name is verified against the
