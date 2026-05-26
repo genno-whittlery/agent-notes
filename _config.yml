@@ -1,0 +1,23 @@
+# Jekyll config for the GitHub Pages render of these notes.
+# Keep this file minimal — the notes are the product; the site is just
+# a way to read them in a browser.
+
+title: Claude Code in 2026 — notes
+description: Personal study notes on Claude Code as it evolved through 2026 (newest-first, rolling).
+
+# Default theme that ships with GitHub Pages. Cayman is plain and
+# readable; the notes carry their own structure so a heavy theme
+# would just compete.
+theme: jekyll-theme-cayman
+
+# Exclude files that shouldn't render as pages.
+exclude:
+  - LICENSE              # plain text; visible via the repo view
+  - "*.bak"
+  - ".gitignore"
+
+# Markdown processor (default for GitHub Pages, made explicit for clarity).
+markdown: kramdown
+kramdown:
+  syntax_highlighter: rouge
+  input: GFM             # GitHub-flavored Markdown — table syntax, fenced code, etc.
