@@ -1,5 +1,7 @@
 # Claude Code in 2026 — a newest-first reference
 
+*Rendered: <https://genno-whittlery.github.io/claude-code-notes/>*
+
 Personal study notes on Claude Code as it evolved through 2026. Six
 entries today, newest at the top; the layout is intentionally
 changelog-shaped so new material can be prepended without
