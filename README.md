@@ -31,6 +31,7 @@ shape changes.
 | **2026-03** | rolling | [`2026-03-blomfield-economics.md`](./2026-03-blomfield-economics.md) | Tom Blomfield (YC partner) on the economics of agentic coding — the "24-year-old vs Accenture" line, 95%-AI-written at YC startups, Jack Clark's "majority of Anthropic's code" |
 | **2026-03-31** | static¹ | [`2026-03-source-leak-architecture.md`](./2026-03-source-leak-architecture.md) | The npm-missing-`.npmignore` leak — what 512K lines of CC source actually says |
 | **2026** | rolling | [`2026-agentic-engineering.md`](./2026-agentic-engineering.md) | The umbrella discipline — practice of engineering reliable behaviour from non-deterministic agents; the seven sub-skills + how the other entries map to them |
+| **2026** | rolling | [`2026-anthropic-academy.md`](./2026-anthropic-academy.md) | anthropic.com/learn — first-party canonical pedagogy (Claude 101, Claude Code in action, MCP guide, certificates); the reset point when community material drifts |
 | **2026** | rolling | [`2026-harness-engineering.md`](./2026-harness-engineering.md) | One sub-discipline of agentic engineering: designing the layer around the LLM; two-agent + three-agent patterns; the 88% production-failure stat |
 | **2026** | rolling | [`2026-hooks-and-effort.md`](./2026-hooks-and-effort.md) | Hooks evolved through 2026: `effort.level`, `terminalSequence`, `duration_ms`, the 8-block `Stop` cap |
 | **2026** | rolling | [`2026-skills-and-marketplace.md`](./2026-skills-and-marketplace.md) | Skills + plugin marketplace + the agentskills.io cross-vendor open standard |
