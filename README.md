@@ -22,6 +22,7 @@ shape changes.
 | Month | Kind | File | One-line |
 |---|---|---|---|
 | **2026-05** | static | [`2026-05-code-review-and-conference.md`](./2026-05-code-review-and-conference.md) | Code w/ Claude conference; the Code Review launch |
+| **2026-05** | rolling | [`2026-05-ds4-c-local-inference.md`](./2026-05-ds4-c-local-inference.md) | antirez/ds4 — single-file C inference engine running DeepSeek V4 Flash locally; OpenAI/Anthropic-compatible API so Claude Code can use it as a backend |
 | **2026-04** | rolling | [`2026-04-hermes-agent.md`](./2026-04-hermes-agent.md) | Nous Research's Hermes Agent — CLI orchestrator that delegates to Claude Code + Codex; ACP protocol (April 2026) |
 | **2026-04** | rolling | [`2026-04-managed-agents-sdk.md`](./2026-04-managed-agents-sdk.md) | `managed-agents-2026-04-01` beta — multi-instance orchestration |
 | **2026-03** | static¹ | [`2026-03-source-leak-architecture.md`](./2026-03-source-leak-architecture.md) | The npm-missing-`.npmignore` leak — what 512K lines of CC source actually says |
