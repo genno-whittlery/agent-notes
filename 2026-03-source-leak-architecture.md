@@ -4,9 +4,11 @@
 
 On 2026-03-31, Anthropic accidentally published the *entire*
 unobfuscated Claude Code source — about **512,000 lines of TypeScript
-across roughly 1,900 files** — to npm. Cause: a missing `.npmignore`
-that should have excluded internal source from the published tarball.
-The package was pulled within hours, but the cat was out of the bag.
+across roughly 1,900 files**
+([Layer5 engineering analysis](https://layer5.io/blog/engineering/the-claude-code-source-leak-512000-lines-a-missing-npmignore-and-the-fastest-growing-repo-in-github-history/))
+— to npm. Cause: a missing `.npmignore` that should have excluded
+internal source from the published tarball. The package was pulled
+within hours, but the cat was out of the bag.
 
 Within a week, an academic paper landed on arxiv —
 *Dive into Claude Code: The Design Space of Today's and Future AI
@@ -23,7 +25,10 @@ been reverse-engineering became things you could just go read.
 ## The headline file: `QueryEngine.ts`
 
 The biggest single module in the leaked source is **`QueryEngine.ts`,
-roughly 46,000 lines**. It is the harness. Specifically, it handles:
+roughly 46,000 lines**
+([Layer5 analysis](https://layer5.io/blog/engineering/the-claude-code-source-leak-512000-lines-a-missing-npmignore-and-the-fastest-growing-repo-in-github-history/),
+[VILA-Lab arxiv §3](https://arxiv.org/html/2604.14228v1)). It is the
+harness. Specifically, it handles:
 
 - Prompt construction (system prompt assembly, CLAUDE.md hierarchy
   expansion, tool definition injection, context window packing)
@@ -52,7 +57,7 @@ trace to specific implementation choices in the leak:
 |---|---|
 | **Human decision authority** | The permission system. Tool calls that touch a write surface or shell trigger an interactive prompt by default. The exit-code-2 "block" semantic in hooks. CLAUDE.md as a place humans declare standing decisions. |
 | **Safety and security** | The sandbox layer. The `--dangerously-skip-permissions` flag's deliberately scary name. The permission-prompt requirement on `Bash`. MCP server trust gating. |
-| **Reliable execution** | Retry logic in QueryEngine. The streaming + checkpointing pattern. The `Stop` hook 8-consecutive-block cap (added 2.1.143) — *prevent infinite loops even when extension code misbehaves*. |
+| **Reliable execution** | Retry logic in QueryEngine. The streaming + checkpointing pattern. The `Stop` hook 8-consecutive-block cap *(supersede note added 2026-05 after the cap shipped in 2.1.143)* — *prevent infinite loops even when extension code misbehaves*. |
 | **Capability amplification** | Tool composition (Read+Edit+Bash+WebSearch as a small set of orthogonal primitives that compose into anything). Subagent dispatch. Skills as reusable capability extensions. |
 | **Contextual adaptability** | CLAUDE.md hierarchy. `--add-dir`. Per-project + user + local settings layering. The way `cwd` propagates through hook input. |
 
@@ -99,11 +104,13 @@ as a cost, and treat CLAUDE.md as one-shot per session."
 Within 24 hours: pulled the package, rotated relevant secrets where
 the leak exposed any, and acknowledged the incident publicly. The
 incident *did not* change Anthropic's posture on whether Claude Code
-will be open-sourced — it remains a closed-source product. But the
+will be open-sourced — it remains a closed-source product. The
 detailed harness analysis the leak enabled has become part of how
-the ecosystem thinks about extending Claude Code, including in
-Anthropic's own documentation, which became noticeably more
-specific about implementation details after the leak.
+the ecosystem thinks about extending Claude Code; post-leak
+Anthropic documentation (notably the
+[*Effective context engineering*](https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents)
+engineering post) includes implementation-level specifics about how
+context packing works that older Anthropic documentation did not.
 
 ## Try this
 

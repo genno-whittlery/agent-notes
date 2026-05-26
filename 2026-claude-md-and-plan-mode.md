@@ -77,16 +77,22 @@ guarantee, not a syntactic one — which is why they hold up.
 ## Plan mode
 
 Plan mode is invoked via `/plan` and is the implementation of rule
-1 from the Chang pattern. The flow:
+1 from the Chang pattern. The flow (per the
+[Anthropic best-practices page](https://code.claude.com/docs/en/best-practices)
+and the DataCamp walkthrough cited below):
 
-1. User invokes `/plan` (or appends `"think hard"` / `"ultrathink"`
-   to the prompt — triggers that the harness interprets as plan-mode
-   intent without the explicit slash command).
+1. User invokes `/plan`. Extended-thinking budget keywords (`think`,
+   `think hard`, `think harder`, `ultrathink`) bias the model toward
+   deeper deliberation but are model-side budget controls — they
+   don't on their own invoke plan mode; they're commonly *combined*
+   with `/plan` in community workflows.
 2. The harness **dispatches a sub-agent specialised in research**.
    The sub-agent reads the codebase, gathers context, and reports
    back to the main agent.
-3. The main agent writes a `plan.md` file to disk — a step-by-step
-   breakdown of what it intends to do.
+3. The main agent produces a plan — in-context by default, or
+   written out as `plan.md` on disk when used as part of the
+   spec-driven workflow described below (where the plan is a
+   first-class artefact reviewed alongside the spec).
 4. The user reviews the plan. Edits, accepts, rejects.
 5. Only on user acceptance does the main agent start executing.
    Tasks happen *one at a time*, with the human reviewing between
@@ -131,21 +137,29 @@ materially better in 2026 (specifically with Opus 4.x), and
 managed-agent dispatch (April 2026) made the research sub-agent
 step robust rather than experimental.
 
-## The "ultrathink" trigger
+## The extended-thinking budget keywords (not plan-mode triggers)
 
-In 2026 the community settled on a small set of trigger phrases the
-harness recognises as plan-mode intent without an explicit `/plan`:
+A common 2026 misconception: that phrases like `think hard` and
+`ultrathink` *invoke plan mode*. They don't. These are
+**extended-thinking budget keywords** documented in Anthropic's
+extended-thinking surface — they bias the model toward longer
+deliberation at higher token cost:
 
-- `think hard`
-- `think hard about this`
-- `ultrathink`
-- `think step by step`
+- `think` — low extra budget
+- `think hard` / `think harder` — increasing extra budget
+- `ultrathink` — the largest budget setting in the documented
+  series
 
-These aren't magic — they're patterns the harness's natural-language
-matcher correlates with plan-mode dispatch. They work because
-**the harness specifically watches for them**, not because LLMs
-respond to the literal phrase. Don't rely on them in scripted
-contexts where reliability matters; use `/plan` explicitly.
+They're model-side budget controls. **Plan mode dispatch happens
+via `/plan` explicitly** (or via plugins that wrap a plan-mode
+workflow around natural-language intent detection). Don't rely on
+budget keywords as plan-mode triggers in scripted contexts where
+reliability matters; use `/plan` explicitly when you want the
+research-sub-agent dispatch + review pause.
+
+The two surfaces *combine* well: `/plan ... ultrathink` invokes the
+plan-mode dispatch with the highest deliberation budget. That's the
+2026 community-favourite shape.
 
 ## A minimum-viable 2026 CLAUDE.md
 

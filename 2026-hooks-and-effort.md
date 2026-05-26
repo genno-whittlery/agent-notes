@@ -41,16 +41,23 @@ real `~/.claude/settings.json` files in the wild:
 | `Notification` | Claude wants to surface something to the user | Useful for desktop-bell / window-title integration via `terminalSequence` (see below). |
 | `PreCompact` | Before `/compact` runs | Last chance to save state that won't survive the summarisation. |
 | `SessionEnd` | Session ends | Cleanup hook. Don't put critical work here — the user can `Ctrl-C` past it. |
-| `CronList` | The `cron list` introspection command runs | **New in 2.1.136**, related to the background-task / scheduled-agent surface. |
 
 The event names that *aren't* on this list, despite appearing in
-some community guides, deserve a callout. None of these exist:
-`StopFailure`, `TeammateIdle`, `TaskCreated`, `TaskCompleted`,
-`FileChanged`, `CwdChanged`, `ConfigChange`, `WorktreeCreate`,
-`WorktreeRemove`, `MCP Elicitation`, `ElicitationResult`,
-`InstructionsLoaded`, `PostCompact`. If a guide tells you to hook
-into one of these, the guide was probably LLM-generated without
-verification.
+some community guides, deserve a callout. None of these exist as
+hook events: `StopFailure`, `TeammateIdle`, `TaskCreated`,
+`TaskCompleted`, `FileChanged`, `CwdChanged`, `ConfigChange`,
+`WorktreeCreate`, `WorktreeRemove`, `MCP Elicitation`,
+`ElicitationResult`, `InstructionsLoaded`, `PostCompact`. If a guide
+tells you to hook into one of these, the guide was probably
+LLM-generated without verification.
+
+**One specific call-out** — `CronList` is sometimes mis-presented as
+a hook event. It's a **CLI command / tool**, not a hook event. The
+2.1.136 changelog entry that fixed `CronList` output "missing
+qualifiers and the scheduled prompt" was about the command's display
+output, not about a hook surface. You can't register
+`hooks: { CronList: [...] }` in settings.json; the harness won't
+fire anything.
 
 ## The effort knob (new in 2026)
 
@@ -170,8 +177,9 @@ session.
    #!/usr/bin/env bash
    # ~/.claude/hooks/log-failures.sh
    mkdir -p ~/.claude/logs
-   cat >> ~/.claude/logs/tool-failures.jsonl
-   echo "" >> ~/.claude/logs/tool-failures.jsonl
+   # jq -c . forces single-line JSON regardless of whether stdin is
+   # pretty-printed — otherwise multi-line input breaks JSONL semantics.
+   jq -c . >> ~/.claude/logs/tool-failures.jsonl
    ```
 
    Register it in `~/.claude/settings.json` under the
@@ -194,8 +202,9 @@ session.
 
 - [Anthropic Claude Code Changelog](https://code.claude.com/docs/en/changelog)
   — canonical event list and version-specific changes (2.1.119 for
-  `duration_ms`, 2.1.133 for `effort.level`, 2.1.136 for `CronList`,
-  2.1.139 for `continueOnBlock`, 2.1.143 for the `Stop` 8-cap).
+  `duration_ms`, 2.1.133 for `effort.level`, 2.1.136 for the
+  `CronList` output fix, 2.1.143 for the `Stop` 8-cap, 2.1.141 for
+  `CLAUDE_CODE_PLUGIN_PREFER_HTTPS`).
 - [Claude Code: Hooks, Subagents, and Skills — Complete Guide](https://ofox.ai/blog/claude-code-hooks-subagents-skills-complete-guide-2026/)
   — third-party 2026 reference covering all three extensibility layers.
 - Anthropic Release Notes, May 2026 (Releasebot summary):

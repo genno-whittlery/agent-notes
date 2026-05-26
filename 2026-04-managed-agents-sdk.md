@@ -67,13 +67,13 @@ narrow context; the orchestrator carries the long-horizon state.
 
 ## Token cost reality
 
-Anthropic's own documentation notes that subagent-heavy workflows can
-consume **around 7×** the tokens of a single-thread session. The
-reason is straightforward when you trace it: each agent dispatched
-sees its own system prompt (large), its own initial context (often
-duplicated across siblings), and produces its own output, and the
-orchestrator then re-reads filesystem outputs and re-issues
-instructions.
+The [Anthropic Managed Agents overview](https://platform.claude.com/docs/en/managed-agents/overview)
+notes that subagent-heavy workflows can consume **around 7×** the
+tokens of a single-thread session. The reason is straightforward when
+you trace it: each agent dispatched sees its own system prompt
+(large), its own initial context (often duplicated across siblings),
+and produces its own output, and the orchestrator then re-reads
+filesystem outputs and re-issues instructions.
 
 The community guidance that emerged in 2026: **don't dispatch a
 subagent for work that fits in your own context window**. The

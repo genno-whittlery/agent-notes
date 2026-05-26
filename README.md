@@ -14,14 +14,22 @@ are dated so a reader can see which parts age first.
 
 ## Entries (newest → oldest)
 
-| Month | File | One-line |
-|---|---|---|
-| **2026-05** | [`2026-05-code-review-and-conference.md`](./2026-05-code-review-and-conference.md) | Code w/ Claude conference; the Code Review launch |
-| **2026-04** | [`2026-04-managed-agents-sdk.md`](./2026-04-managed-agents-sdk.md) | `managed-agents-2026-04-01` beta — multi-instance orchestration |
-| **2026-03** | [`2026-03-source-leak-architecture.md`](./2026-03-source-leak-architecture.md) | The npm-missing-`.npmignore` leak — what 512K lines of CC source actually says |
-| **2026 (ongoing)** | [`2026-hooks-and-effort.md`](./2026-hooks-and-effort.md) | Hooks evolved through 2026: `effort.level`, `terminalSequence`, `duration_ms`, the 8-block `Stop` cap |
-| **2026** | [`2026-skills-and-marketplace.md`](./2026-skills-and-marketplace.md) | Skills + plugin marketplace + the agentskills.io cross-vendor open standard |
-| **2026** | [`2026-claude-md-and-plan-mode.md`](./2026-claude-md-and-plan-mode.md) | Forrest Chang's CLAUDE.md (220K ⭐), plan mode, the spec-driven workflow |
+Entry kind: **static** = a dated event whose facts don't move; **rolling**
+= a topic that accretes references and gets supersede-notes as the
+shape changes.
+
+| Month | Kind | File | One-line |
+|---|---|---|---|
+| **2026-05** | static | [`2026-05-code-review-and-conference.md`](./2026-05-code-review-and-conference.md) | Code w/ Claude conference; the Code Review launch |
+| **2026-04** | rolling | [`2026-04-managed-agents-sdk.md`](./2026-04-managed-agents-sdk.md) | `managed-agents-2026-04-01` beta — multi-instance orchestration |
+| **2026-03** | static¹ | [`2026-03-source-leak-architecture.md`](./2026-03-source-leak-architecture.md) | The npm-missing-`.npmignore` leak — what 512K lines of CC source actually says |
+| **2026** | rolling | [`2026-hooks-and-effort.md`](./2026-hooks-and-effort.md) | Hooks evolved through 2026: `effort.level`, `terminalSequence`, `duration_ms`, the 8-block `Stop` cap |
+| **2026** | rolling | [`2026-skills-and-marketplace.md`](./2026-skills-and-marketplace.md) | Skills + plugin marketplace + the agentskills.io cross-vendor open standard |
+| **2026** | rolling | [`2026-claude-md-and-plan-mode.md`](./2026-claude-md-and-plan-mode.md) | Forrest Chang's CLAUDE.md (220K+ ⭐ across the fork network), plan mode, the spec-driven workflow |
+
+¹ The leak itself is a static 2026-03-31 event; the entry carries
+some 2026-05 supersede notes (e.g., 2.1.143 `Stop` 8-cap) marking
+post-March reverberations.
 
 ## How to read this
 

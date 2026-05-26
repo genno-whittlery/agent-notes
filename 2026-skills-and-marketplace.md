@@ -20,9 +20,9 @@ What made skills the headline 2026 ecosystem story:
    format.
 3. **The supply exploded**: from a handful of official examples at
    the start of 2026 to over a million community contributions
-   indexed across marketplaces by mid-year. Specific numbers from
-   community indexes: tonsofskills.com aggregates 425 plugins,
-   2,810 skills, and 200 agents.
+   indexed across marketplaces by mid-year (per the
+   [tonsofskills.com aggregator](https://github.com/jeremylongshore/claude-code-plugins-plus-skills),
+   numbers as of 2026-05: 425 plugins, 2,810 skills, 200 agents).
 
 The combined effect is that a 2026 Claude Code workflow is built
 *much* more around composed skills than a 2025 one was around
@@ -70,7 +70,15 @@ Two things matter about the format:
 
 You can disable a skill without uninstalling it by renaming
 `SKILL.md` to `_SKILL.md` (the harness's discovery walks for
-`SKILL.md` and won't pick up the underscore-prefixed variant).
+`SKILL.md` and won't pick up the underscore-prefixed variant — see
+the [Mark Chen walkthrough](https://medium.com/@markchen69/claude-code-has-a-skills-marketplace-now-a-beginner-friendly-walkthrough-8adeb67cdc89)
+for the same trick documented in detail).
+
+A subtle but consequential clarification on skill identity: **the
+harness resolves skills by *folder name*; the `name:` frontmatter
+is display metadata.** Folder `my-skill/` with frontmatter
+`name: my-skill` is the conventional shape, but if the two diverge
+the folder name wins for resolution.
 
 ## Plugins: how skills get distributed
 
@@ -144,7 +152,10 @@ muscle memory says `r`.
 
 Cloning is **SSH by default** when the source is `github`, which
 trips up users without a global github.com SSH key (common — many
-people use per-org aliases like `github-genno`). To force HTTPS:
+people use per-org aliases like `github-genno`). To force HTTPS,
+use the environment variable
+[`CLAUDE_CODE_PLUGIN_PREFER_HTTPS`](https://www.agensi.io/learn/claude-code-plugin-marketplace-guide)
+(shipped in v2.1.141):
 
 ```sh
 export CLAUDE_CODE_PLUGIN_PREFER_HTTPS=1
@@ -171,7 +182,9 @@ Code feature: the **agentskills.io** open standard formalised
 - **Cursor** — via Cursor's own rules system bridging
 - **Gemini CLI** — via Gemini's skill loading
 - **GitHub Copilot** — via Copilot's skills surface
-- **30+ other agents** that have adopted the standard
+- **A long tail of other agents** that have adopted the standard
+  ([agentskills.io](https://www.agensi.io/learn/claude-code-plugin-marketplace-guide)
+  maintains the canonical list)
 
 The wrapper manifests vary (each tool wants its own `plugin.json`
 shape pointing at the skill), but the *skill itself* is portable.
