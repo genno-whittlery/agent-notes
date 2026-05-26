@@ -1,15 +1,15 @@
 # Claude Code in 2026 — a newest-first reference
 
-Whittlery's running, dated reference on Claude Code as it evolved through
-2026. Six entries today, newest at the top; the layout is intentionally
-changelog-shaped so new material can be prepended without restructuring.
+Personal study notes on Claude Code as it evolved through 2026. Six
+entries today, newest at the top; the layout is intentionally
+changelog-shaped so new material can be prepended without
+restructuring as our understanding grows.
 
-This exists because the most-cited 2026 community guides have
-plausible structure but factual errors — invented hook event names,
-unsourced numbers, conflated CLI-vs-hook surfaces. The remedy here:
-every concrete claim is cited, every event name verified against the
-[official Anthropic changelog](https://code.claude.com/docs/en/changelog),
-and the entries are dated so a reader can see which parts age first.
+Working discipline: every concrete claim cites a 2026 source, every
+hook event name is verified against the
+[official Anthropic changelog](https://code.claude.com/docs/en/changelog)
+before going in, and entries are dated so a reader (future-us
+included) can see which parts age first.
 
 ## Entries (newest → oldest)
 
@@ -58,24 +58,26 @@ Each entry has the same shape:
   patterns get a passing mention only when they're the foundation a
   2026 idea builds on.
 
-## Contributing / updating
+## Updating
 
 Add a new entry by writing `<YYYY-MM>-<slug>.md` and prepending one
 line to the index above. Don't renumber. Don't backdate.
 
-When a claim in an existing entry becomes wrong (a hook event renamed,
-an SDK version superseded), edit in place with a strikethrough or a
-"superseded 2026-XX-XX" note at the top of the affected section —
-don't silently delete. Half the value here is letting readers see
-*when* the shape of Claude Code changed.
+When a claim in an existing entry becomes wrong (a hook event
+renamed, an SDK version superseded), edit in place with a
+strikethrough or a "superseded 2026-XX-XX" note at the top of the
+affected section — don't silently delete. Half the value here is
+letting future-us see *when* the shape of Claude Code changed.
 
 ## License
 
-MIT. See [LICENSE](./LICENSE).
+MIT. See [LICENSE](./LICENSE). Public so the notes are reachable
+across machines and shareable when useful, not because they claim to
+be authoritative.
 
 ## About
 
-Maintained under the Genno persona at
+Personal study notes kept under the Genno persona at
 [whittlery.io](https://whittlery.io). Companion to
 [`genno-whittlery/web-monkey`](https://github.com/genno-whittlery/web-monkey)
-(in-house UI fuzz harness, also OSS).
+(in-house UI fuzz harness, also kept as public notes).

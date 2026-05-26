@@ -42,14 +42,17 @@ real `~/.claude/settings.json` files in the wild:
 | `PreCompact` | Before `/compact` runs | Last chance to save state that won't survive the summarisation. |
 | `SessionEnd` | Session ends | Cleanup hook. Don't put critical work here — the user can `Ctrl-C` past it. |
 
-The event names that *aren't* on this list, despite appearing in
-some community guides, deserve a callout. None of these exist as
-hook events: `StopFailure`, `TeammateIdle`, `TaskCreated`,
+A few plausible-sounding names that we've considered or seen
+referenced but verified do *not* exist as hook events in 2026
+Claude Code: `StopFailure`, `TeammateIdle`, `TaskCreated`,
 `TaskCompleted`, `FileChanged`, `CwdChanged`, `ConfigChange`,
 `WorktreeCreate`, `WorktreeRemove`, `MCP Elicitation`,
-`ElicitationResult`, `InstructionsLoaded`, `PostCompact`. If a guide
-tells you to hook into one of these, the guide was probably
-LLM-generated without verification.
+`ElicitationResult`, `InstructionsLoaded`, `PostCompact`. The
+harness's settings.json loader won't fire anything if you register
+under one of these keys; the entry is silently ignored. Worth
+double-checking against the
+[official changelog](https://code.claude.com/docs/en/changelog)
+before adding a new hook entry to settings.
 
 **One specific call-out** — `CronList` is sometimes mis-presented as
 a hook event. It's a **CLI command / tool**, not a hook event. The
