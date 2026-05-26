@@ -21,13 +21,15 @@ shape changes.
 
 | Month | Kind | File | One-line |
 |---|---|---|---|
-| **2026-05** | static | [`2026-05-code-review-and-conference.md`](./2026-05-code-review-and-conference.md) | Code w/ Claude conference; the Code Review launch |
-| **2026-05** | rolling | [`2026-05-ds4-c-local-inference.md`](./2026-05-ds4-c-local-inference.md) | antirez/ds4 — single-file C inference engine running DeepSeek V4 Flash locally; OpenAI/Anthropic-compatible API so Claude Code can use it as a backend |
-| **2026-04** | static | [`2026-04-aie-europe.md`](./2026-04-aie-europe.md) | AI Engineer Europe (London, 8–10 April) — harness engineering crystallises, "strange stickiness of coding products," AI coding wars |
+| **2026-05-11** | rolling | [`2026-05-ds4-c-local-inference.md`](./2026-05-ds4-c-local-inference.md) | antirez/ds4 — single-file C inference engine running DeepSeek V4 Flash locally; OpenAI/Anthropic-compatible API so Claude Code can use it as a backend |
+| **2026-05-06** | static | [`2026-05-code-review-and-conference.md`](./2026-05-code-review-and-conference.md) | Code w/ Claude conference; the Code Review launch |
+| **2026-05-05** | static | [`2026-05-claude-for-finance.md`](./2026-05-claude-for-finance.md) | Anthropic's 10 finance-agent templates + Opus 4.7 finance-benchmark lead + Microsoft 365 integration + $1.5B enterprise JV |
+| **2026-04-17** | static | [`2026-04-claude-design.md`](./2026-04-claude-design.md) | Claude Design + "Claude for Creative Work" — Anthropic past coding into design / Adobe-Autodesk-Ableton-Blender-Splice connector network |
+| **2026-04-08** | static | [`2026-04-aie-europe.md`](./2026-04-aie-europe.md) | AI Engineer Europe (London, 8–10 April) — harness engineering crystallises, "strange stickiness of coding products," AI coding wars |
 | **2026-04** | rolling | [`2026-04-hermes-agent.md`](./2026-04-hermes-agent.md) | Nous Research's Hermes Agent — CLI orchestrator that delegates to Claude Code + Codex; ACP protocol (April 2026) |
 | **2026-04** | rolling | [`2026-04-managed-agents-sdk.md`](./2026-04-managed-agents-sdk.md) | `managed-agents-2026-04-01` beta — multi-instance orchestration |
 | **2026-03** | rolling | [`2026-03-blomfield-economics.md`](./2026-03-blomfield-economics.md) | Tom Blomfield (YC partner) on the economics of agentic coding — the "24-year-old vs Accenture" line, 95%-AI-written at YC startups, Jack Clark's "majority of Anthropic's code" |
-| **2026-03** | static¹ | [`2026-03-source-leak-architecture.md`](./2026-03-source-leak-architecture.md) | The npm-missing-`.npmignore` leak — what 512K lines of CC source actually says |
+| **2026-03-31** | static¹ | [`2026-03-source-leak-architecture.md`](./2026-03-source-leak-architecture.md) | The npm-missing-`.npmignore` leak — what 512K lines of CC source actually says |
 | **2026** | rolling | [`2026-agentic-engineering.md`](./2026-agentic-engineering.md) | The umbrella discipline — practice of engineering reliable behaviour from non-deterministic agents; the seven sub-skills + how the other entries map to them |
 | **2026** | rolling | [`2026-harness-engineering.md`](./2026-harness-engineering.md) | One sub-discipline of agentic engineering: designing the layer around the LLM; two-agent + three-agent patterns; the 88% production-failure stat |
 | **2026** | rolling | [`2026-hooks-and-effort.md`](./2026-hooks-and-effort.md) | Hooks evolved through 2026: `effort.level`, `terminalSequence`, `duration_ms`, the 8-block `Stop` cap |
