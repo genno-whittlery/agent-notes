@@ -28,7 +28,8 @@ shape changes.
 | **2026-04** | rolling | [`2026-04-managed-agents-sdk.md`](./2026-04-managed-agents-sdk.md) | `managed-agents-2026-04-01` beta — multi-instance orchestration |
 | **2026-03** | rolling | [`2026-03-blomfield-economics.md`](./2026-03-blomfield-economics.md) | Tom Blomfield (YC partner) on the economics of agentic coding — the "24-year-old vs Accenture" line, 95%-AI-written at YC startups, Jack Clark's "majority of Anthropic's code" |
 | **2026-03** | static¹ | [`2026-03-source-leak-architecture.md`](./2026-03-source-leak-architecture.md) | The npm-missing-`.npmignore` leak — what 512K lines of CC source actually says |
-| **2026** | rolling | [`2026-harness-engineering.md`](./2026-harness-engineering.md) | The 2026 term-of-art for designing the layer around the LLM; two-agent + three-agent patterns; the 88% production-failure stat |
+| **2026** | rolling | [`2026-agentic-engineering.md`](./2026-agentic-engineering.md) | The umbrella discipline — practice of engineering reliable behaviour from non-deterministic agents; the seven sub-skills + how the other entries map to them |
+| **2026** | rolling | [`2026-harness-engineering.md`](./2026-harness-engineering.md) | One sub-discipline of agentic engineering: designing the layer around the LLM; two-agent + three-agent patterns; the 88% production-failure stat |
 | **2026** | rolling | [`2026-hooks-and-effort.md`](./2026-hooks-and-effort.md) | Hooks evolved through 2026: `effort.level`, `terminalSequence`, `duration_ms`, the 8-block `Stop` cap |
 | **2026** | rolling | [`2026-skills-and-marketplace.md`](./2026-skills-and-marketplace.md) | Skills + plugin marketplace + the agentskills.io cross-vendor open standard |
 | **2026** | rolling | [`2026-claude-md-and-plan-mode.md`](./2026-claude-md-and-plan-mode.md) | Forrest Chang's CLAUDE.md (220K+ ⭐ across the fork network), plan mode, the spec-driven workflow |
